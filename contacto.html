@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Salud Cerca</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">Salud<span>Cerca</span></a>
+
+        <button class="boton-menu" id="botonMenu"
+                aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="navegacion" id="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="citas.html">Solicitar cita</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cabecera-pagina">
+            <span class="etiqueta">Contacto</span>
+            <h1>Estamos para escucharte</h1>
+            <p>
+                Consulta la información de este proyecto y utiliza
+                el formulario de demostración.
+            </p>
+        </section>
+
+        <section class="seccion contacto-seccion">
+            <div class="contacto-informacion">
+                <h2>Información de contacto</h2>
+
+                <p>
+                    Los siguientes datos son ejemplos de contacto para esta demostracion
+                </p>
+
+                <div class="dato-contacto">
+                    <span class="icono-tarjeta">⌖</span>
+                    <div>
+                        <h3>Dirección</h3>
+                        <p>30 de mayo ,zapotiltic</p>
+                    </div>
+                </div>
+
+                <div class="dato-contacto">
+                    <span class="icono-tarjeta"></span>
+                    <div>
+                        <h3>Teléfono: 341158260555</h3>
+                        <p>341158260555</p>
+                    </div>
+                </div>
+
+                <div class="dato-contacto">
+                    <span class="icono-tarjeta">◷</span>
+                    <div>
+                        <h3>Horario</h3>
+                        <p>lunes a viernes, 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="formularioContacto" class="formulario">
+                <h2>Envíanos un mensaje</h2>
+
+                <div class="campo">
+                    <label for="contactoNombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="contactoNombre"
+                        name="nombre"
+                        minlength="3"
+                        maxlength="80"
+                        placeholder="Tu nombre"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="contactoCorreo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="contactoCorreo"
+                        name="correo"
+                        maxlength="120"
+                        placeholder="ejemplo@correo.com"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="Información">Información general</option>
+                        <option value="Servicios">Servicios</option>
+                        <option value="Citas">Solicitud de cita</option>
+                        <option value="Otro">Otro asunto</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensajeContacto">Mensaje</label>
+                    <textarea
+                        id="mensajeContacto"
+                        name="mensaje"
+                        rows="5"
+                        maxlength="500"
+                        placeholder="Escribe un mensaje general"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="boton boton-principal boton-ancho">
+                    Preparar mensaje
+                </button>
+
+                <p id="mensajeContactoResultado"
+                   class="mensaje" role="status" aria-live="polite"></p>
+
+                <p class="nota">
+                    No incluyas información médica privada.
+                    Este formulario no envía datos a un servidor.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div>
+            <a href="index.html" class="logo logo-pie">Salud<span>Cerca</span></a>
+            <p>Información y orientación para el cuidado de tu salud.</p>
+        </div>
+
+        <div class="pie-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="citas.html">Solicitar cita</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="anio"></span> Salud Cerca. Proyecto demostrativo.
+        </p>
+    </footer>
+
+</body>
+</html>

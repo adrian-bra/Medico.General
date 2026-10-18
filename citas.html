@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar cita | Salud Cerca</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="logo">Salud<span>Cerca</span></a>
+
+        <button class="boton-menu" id="botonMenu"
+                aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="navegacion" id="navegacion">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="citas.html" class="activo">Solicitar cita</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cabecera-pagina">
+            <span class="etiqueta">Solicitud de atención</span>
+            <h1>Solicita una cita</h1>
+            <p>
+                Completa el formulario de demostración. La solicitud
+                no equivale a una cita confirmada.
+            </p>
+        </section>
+
+        <section class="seccion formulario-seccion">
+            <div class="formulario-intro">
+                <div class="icono-grande">✚</div>
+                <h2>Estamos para orientarte</h2>
+                <p>
+                    Proporciona solamente los datos necesarios para
+                    esta demostración. No escribas diagnósticos,
+                    contraseñas ni información médica sensible.
+                </p>
+            </div>
+
+            <form id="formularioCita" class="formulario">
+
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        minlength="3"
+                        maxlength="80"
+                        autocomplete="name"
+                        required>
+                </div>
+
+                <div class="rejilla rejilla-dos">
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            autocomplete="email"
+                            maxlength="120"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Tu número de contacto"
+                            autocomplete="tel"
+                            maxlength="20">
+                    </div>
+                </div>
+
+                <div class="rejilla rejilla-dos">
+                    <div class="campo">
+                        <label for="fecha">Fecha preferida</label>
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="hora">Horario preferido</label>
+                        <select id="hora" name="hora" required>
+                            <option value="">Selecciona un horario</option>
+                            <option value="09:00">9:00 a. m.</option>
+                            <option value="10:00">10:00 a. m.</option>
+                            <option value="11:00">11:00 a. m.</option>
+                            <option value="12:00">12:00 p. m.</option>
+                            <option value="16:00">4:00 p. m.</option>
+                            <option value="17:00">5:00 p. m.</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo">Motivo general de la cita</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Consulta general">Consulta general</option>
+                        <option value="Revisión preventiva">Revisión preventiva</option>
+                        <option value="Seguimiento">Seguimiento</option>
+                        <option value="Orientación general">Orientación general</option>
+                    </select>
+                </div>
+
+                <label class="aceptacion">
+                    <input type="checkbox" id="aceptacion" required>
+                    <span>
+                        Confirmo que los datos son correctos y entiendo
+                        que este formulario es una demostración.
+                    </span>
+                </label>
+
+                <button type="submit" class="boton boton-principal boton-ancho">
+                    Enviar solicitud de demostración
+                </button>
+
+                <p id="mensajeCita" class="mensaje" role="status"
+                   aria-live="polite"></p>
+
+                <p class="nota">
+                    Este sitio no envía correos ni reserva citas reales.
+                    Los datos se guardan únicamente en el navegador
+                    de este dispositivo.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div>
+            <a href="index.html" class="logo logo-pie">Salud<span>Cerca</span></a>
+            <p>Información y orientación para el cuidado de tu salud.</p>
+        </div>
+
+        <div class="pie-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+        <p class="copyright">
+            © <span id="anio"></span> Salud Cerca. Proyecto demostrativo.
+        </p>
+    </footer>
+
+</body>
+</html>
